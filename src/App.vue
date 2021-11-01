@@ -1,20 +1,20 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <ClassHome />
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+//import HelloWorld from './components/HelloWorld.vue'
+import ClassHome from "./components/ClassHome";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
+    ClassHome,
   },
-  created(){
-    console.log(this.$store.state.count)
-}
-}
+  created() {
+    console.log(this.$store.state.count);
+  },
+};
 </script>
 
 <style>
@@ -24,6 +24,7 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  height: 100vh;
+  /*max-height: 100vh;*/
 }
 </style>
