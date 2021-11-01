@@ -13,38 +13,19 @@
         <button class="btn btn-outline-success" type="submit">Search</button>
       </form>
     </nav>
-    <div v-if="courses" class="container-fluid pt-5">
+    <div v-if="courses" class="container-fluid">
       <div
-        class="course-box w-100"
+        class="course-box w-100 pt-5"
         v-for="(course, index) in courses"
         :key="index"
       >
         <div class="card">
           <div class="card-header">{{ course.title }}</div>
           <div class="card-body">
-            <blockquote class="blockquote mb-0 d-flex justify-content-around">
-              <div
-                v-for="(child, index) in course.child_list"
-                :key="index"
-                class="card border-dark mb-3 w-100"
-                style="max-width: 18rem"
-              >
-                <div class="card-header">{{ child.title }}</div>
-                <div class="card-body text-dark">
-                  <div
-                    class="course_class"
-                    v-for="n in parseInt(child.course_num)"
-                    :key="n"
-                  >
-                    <div class="class_item card border-dark mb-3">
-                      {{ n }}
-                    </div>
-                  </div>
-                </div>
-                <footer class="blockquote-footer">
-                  <span>word {{ child.word_num }}</span>
-                </footer>
-              </div>
+            <blockquote
+              class="blockquote mb-0 d-flex flex-wrap justify-content-evenly"
+            >
+              <Book v-for="(child, index) in course.child_list" :key="index" :child="child" />
             </blockquote>
             <footer class="footer">
               Courses {{ course.course_num }} - Word {{ course.word_num }}
@@ -58,9 +39,13 @@
 
 <script>
 import { mapState } from "vuex";
+import Book from "../components/classComponents/Book"
 
 export default {
   name: "HelloWorld",
+   components: {
+    Book
+  },
   props: {},
   mounted() {},
   methods: {},
@@ -87,11 +72,5 @@ export default {
 .card {
   height: 100%;
 }
-.course_class{
-  display: inline-block;
-}
-.class_item {
-  height: 40px;
-  width: 40px;
-}
+
 </style>

@@ -1,5 +1,6 @@
 import { createStore } from 'vuex'
 import { mapState } from 'vuex'
+import axios from 'axios'
 
 const store = createStore({
   state() {
@@ -11,13 +12,25 @@ const store = createStore({
               class_id: "250815",
               word_num: "345",
               title: "新初中人教版 八年级上",
-              course_num: "18"
+              course_num: "200"
             },
             {
               class_id: "358176",
               word_num: "492",
               title: "新初中人教版 八年级下",
               course_num: "25"
+            },
+            {
+              class_id: "358176",
+              word_num: "492",
+              title: "新初中人教版 八年级下",
+              course_num: "15"
+            },
+            {
+              class_id: "358176",
+              word_num: "492",
+              title: "新初中人教版 八年级下",
+              course_num: "30"
             }
           ],
           word_num: "837",
@@ -49,6 +62,15 @@ const store = createStore({
   mutations: {
     increment(state) {
       state.count++
+    }
+  },
+  actions:{
+    getData(){
+      axios.get("google.com")
+     /*axios.get('http://rw.ylapi.cn/reciteword/list.u?uid=11936&appkey=43d5fb26627c965d3d976647f0d56aa6').then((response) => {
+       console.log(response)
+        this.state.courses = response.data.datas
+      })*/
     }
   },
   computed: mapState({
