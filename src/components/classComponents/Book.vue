@@ -13,12 +13,11 @@
           </li>
         </ul>
       </div>
-      <div
-        class="course_class"
-        v-for="n in pages"
-        :key="n"
-      >
-        <div class="class_item card border-dark mb-3">
+      <div class="course_class" v-for="n in pages" :key="n">
+        <div
+          class="class_item card border-dark mb-3"
+          @click="go_learn(this.init + n)"
+        >
           {{ this.init + n }}
         </div>
       </div>
@@ -69,6 +68,10 @@ export default {
       this.init = item.index;
       this.pages = item.pages;
     },
+    go_learn(index){
+      
+      console.log(`class id: ${this.child.class_id} - course ${index}`)
+    }
   },
 };
 </script>
@@ -97,9 +100,11 @@ export default {
     padding: 0;
     margin-left: 3px;
     display: flex;
+    overflow-x: scroll;
     background-color: ghostwhite;
     li {
       list-style: none;
+      white-space: nowrap;
       margin-right: 10px;
     }
     li:hover {

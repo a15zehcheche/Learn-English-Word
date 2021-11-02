@@ -5,58 +5,7 @@ import axios from 'axios'
 const store = createStore({
   state() {
     return {
-      courses: [
-        {
-          child_list: [
-            {
-              class_id: "250815",
-              word_num: "345",
-              title: "新初中人教版 八年级上",
-              course_num: "200"
-            },
-            {
-              class_id: "358176",
-              word_num: "492",
-              title: "新初中人教版 八年级下",
-              course_num: "25"
-            },
-            {
-              class_id: "358176",
-              word_num: "492",
-              title: "新初中人教版 八年级下",
-              course_num: "15"
-            },
-            {
-              class_id: "358176",
-              word_num: "492",
-              title: "新初中人教版 八年级下",
-              course_num: "30"
-            }
-          ],
-          word_num: "837",
-          title: "新初中人教版",
-          course_num: "43"
-        },
-        {
-          child_list: [
-            {
-              class_id: "136000",
-              word_num: "200",
-              title: "BEC高级",
-              course_num: "10"
-            },
-            {
-              class_id: "630791",
-              word_num: "929",
-              title: "BEC中级",
-              course_num: "47"
-            }
-          ],
-          word_num: "1129",
-          title: "BEC商务英语",
-          course_num: "57"
-        }
-      ]
+      courses:  require('./list.json').datas
     }
   },
   mutations: {
@@ -66,11 +15,17 @@ const store = createStore({
   },
   actions:{
     getData(){
-      axios.get("google.com")
+      axios.get("http://www.baidu.com")
      /*axios.get('http://rw.ylapi.cn/reciteword/list.u?uid=11936&appkey=43d5fb26627c965d3d976647f0d56aa6').then((response) => {
        console.log(response)
         this.state.courses = response.data.datas
       })*/
+      let i=0;
+      this.state.courses.forEach(course =>{
+        i += parseInt(course.course_num);
+      })
+      console.log(i)
+      
     }
   },
   computed: mapState({
