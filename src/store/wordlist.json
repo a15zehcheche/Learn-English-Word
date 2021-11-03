@@ -1,0 +1,185 @@
+{
+    "msg": "success",
+    "code": "1000",
+    "datas": [
+        {
+            "symbol": "[ˈeniwʌn]",
+            "sound": "https://v.ylapi.cn/img/api/api_reciteword_word_list/51d714b6efcf3b88.mp3",
+            "class_id": "250815",
+            "name": "anyone",
+            "course": "1",
+            "class_title": "新初中人教版 八年级上",
+            "desc": "pron.任何人"
+        },
+        {
+            "symbol": "[ˈeniweə(r)]",
+            "sound": "https://v.ylapi.cn/img/api/api_reciteword_word_list/db12fa1832aed87a.mp3",
+            "class_id": "250815",
+            "name": "anywhere",
+            "course": "1",
+            "class_title": "新初中人教版 八年级上",
+            "desc": "adv.任何地方  n.任何(一个)地方"
+        },
+        {
+            "symbol": "[ˈwʌndəfl]",
+            "sound": "https://v.ylapi.cn/img/api/api_reciteword_word_list/82183c2639953233.mp3",
+            "class_id": "250815",
+            "name": "wonderful",
+            "course": "1",
+            "class_title": "新初中人教版 八年级上",
+            "desc": "adj.精彩的；极好的　"
+        },
+        {
+            "symbol": "[fju:]",
+            "sound": "https://v.ylapi.cn/img/api/api_reciteword_word_list/0f4aadd993bda164.mp3",
+            "class_id": "250815",
+            "name": "few",
+            "course": "1",
+            "class_title": "新初中人教版 八年级上",
+            "desc": "adj.很少的；  n.少量"
+        },
+        {
+            "symbol": "[məʊst]",
+            "sound": "https://v.ylapi.cn/img/api/api_reciteword_word_list/438f36c8ff055064.mp3",
+            "class_id": "250815",
+            "name": "most",
+            "course": "1",
+            "class_title": "新初中人教版 八年级上",
+            "desc": "adj.最多的；大多数的；"
+        },
+        {
+            "symbol": "[ˈsʌmθɪŋ]",
+            "sound": "https://v.ylapi.cn/img/api/api_reciteword_word_list/2c2f6dd8f6305e51.mp3",
+            "class_id": "250815",
+            "name": "something",
+            "course": "1",
+            "class_title": "新初中人教版 八年级上",
+            "desc": "pron.某事物；"
+        },
+        {
+            "symbol": "[’nʌθɪŋ]",
+            "sound": "https://v.ylapi.cn/img/api/api_reciteword_word_list/87c962d881207555.mp3",
+            "class_id": "250815",
+            "name": "nothing",
+            "course": "1",
+            "class_title": "新初中人教版 八年级上",
+            "desc": "pron.没有什么  n.没有"
+        },
+        {
+            "symbol": "[maɪˈself]",
+            "sound": "https://v.ylapi.cn/img/api/api_reciteword_word_list/33811b8d48a0b048.mp3",
+            "class_id": "250815",
+            "name": "myself",
+            "course": "1",
+            "class_title": "新初中人教版 八年级上",
+            "desc": "pron.我自己"
+        },
+        {
+            "symbol": "[ˈevriwʌn]",
+            "sound": "https://v.ylapi.cn/img/api/api_reciteword_word_list/89471282bd4f48e3.mp3",
+            "class_id": "250815",
+            "name": "everyone",
+            "course": "1",
+            "class_title": "新初中人教版 八年级上",
+            "desc": "pron.每人；人人"
+        },
+        {
+            "symbol": "[jɔ:ˈself]",
+            "sound": "https://v.ylapi.cn/img/api/api_reciteword_word_list/fa72a91d5b2bdd17.mp3",
+            "class_id": "250815",
+            "name": "yourself",
+            "course": "1",
+            "class_title": "新初中人教版 八年级上",
+            "desc": "pron.你自己；你亲自"
+        },
+        {
+            "symbol": "[hen]",
+            "sound": "https://v.ylapi.cn/img/api/api_reciteword_word_list/c1a64fc513f598b5.mp3",
+            "class_id": "250815",
+            "name": "hen",
+            "course": "1",
+            "class_title": "新初中人教版 八年级上",
+            "desc": "n.母鸡；雌禽 　"
+        },
+        {
+            "sound": "https://v.ylapi.cn/img/api/api_reciteword_word_list/55229540b7b412ea.mp3",
+            "class_id": "250815",
+            "name": "bored",
+            "course": "1",
+            "class_title": "新初中人教版 八年级上",
+            "desc": "adj.无聊的；厌烦的；郁闷的"
+        },
+        {
+            "symbol": "[pɪɡ]",
+            "sound": "https://v.ylapi.cn/img/api/api_reciteword_word_list/8d9dffbdf87980d0.mp3",
+            "class_id": "250815",
+            "name": "pig",
+            "course": "1",
+            "class_title": "新初中人教版 八年级上",
+            "desc": "n.猪"
+        },
+        {
+            "symbol": "[’daɪərɪ]",
+            "sound": "https://v.ylapi.cn/img/api/api_reciteword_word_list/2533bf688ef24ada.mp3",
+            "class_id": "250815",
+            "name": "diary",
+            "course": "1",
+            "class_title": "新初中人教版 八年级上",
+            "desc": "n.日记；日记簿(keep a diar..."
+        },
+        {
+            "symbol": "[si:m]",
+            "sound": "https://v.ylapi.cn/img/api/api_reciteword_word_list/b38a85e3a7633720.mp3",
+            "class_id": "250815",
+            "name": "seem",
+            "course": "1",
+            "class_title": "新初中人教版 八年级上",
+            "desc": "vi.似乎；好像"
+        },
+        {
+            "symbol": "[ˈsʌmwʌn]",
+            "sound": "https://v.ylapi.cn/img/api/api_reciteword_word_list/cfc558f7cd9ec74d.mp3",
+            "class_id": "250815",
+            "name": "someone",
+            "course": "1",
+            "class_title": "新初中人教版 八年级上",
+            "desc": "pron.某人；有人"
+        },
+        {
+            "symbol": "[kwait ə fju:]",
+            "sound": "https://v.ylapi.cn/img/api/api_reciteword_word_list/fa049bb684775a54.mp3",
+            "class_id": "250815",
+            "name": "quite a few",
+            "course": "1",
+            "class_title": "新初中人教版 八年级上",
+            "desc": "相当多；"
+        },
+        {
+            "symbol": "[ɔv kɔː(r)s]",
+            "sound": "https://v.ylapi.cn/img/api/api_reciteword_word_list/988909b21321692e.mp3",
+            "class_id": "250815",
+            "name": "of course",
+            "course": "1",
+            "class_title": "新初中人教版 八年级上",
+            "desc": "当然，自然；敢情；自是；理当；"
+        },
+        {
+            "symbol": "[æk’tɪvətɪ]",
+            "sound": "https://v.ylapi.cn/img/api/api_reciteword_word_list/0e5996c20d9f401f.mp3",
+            "class_id": "250815",
+            "name": "activity",
+            "course": "1",
+            "class_title": "新初中人教版 八年级上",
+            "desc": "n.活动；活跃　"
+        },
+        {
+            "symbol": "[dɪ’saɪd]",
+            "sound": "https://v.ylapi.cn/img/api/api_reciteword_word_list/01786d7928e9b977.mp3",
+            "class_id": "250815",
+            "name": "decide",
+            "course": "1",
+            "class_title": "新初中人教版 八年级上",
+            "desc": "v.决定；选定(decide to do..."
+        }
+    ]
+}

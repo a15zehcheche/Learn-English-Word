@@ -5,7 +5,9 @@ import axios from 'axios'
 const store = createStore({
   state() {
     return {
-      courses:  require('./list.json').datas
+      screenComponest:"ClassHome",
+      books:  require('./list.json').datas,
+      word:  require('./wordlist.json').datas
     }
   },
   mutations: {
@@ -14,29 +16,40 @@ const store = createStore({
     }
   },
   actions:{
+    getCourse(state,{bookId,num}){
+      console.log(`book ${bookId} - ${num}`)
+      /*axios.get('http://rw.ylapi.cn/reciteword/wordlist.u?uid=11936&appkey=43d5fb26627c965d3d976647f0d56aa6&class_id=250815&course=1').then((response) => {
+       console.log(response)
+        this.state.course = response.data.datas
+      })*/
+    },
     getData(){
       axios.get("http://www.baidu.com")
      /*axios.get('http://rw.ylapi.cn/reciteword/list.u?uid=11936&appkey=43d5fb26627c965d3d976647f0d56aa6').then((response) => {
        console.log(response)
-        this.state.courses = response.data.datas
+        this.state.books = response.data.datas
       })*/
       let i=0;
-      this.state.courses.forEach(course =>{
+      this.state.books.forEach(course =>{
         i += parseInt(course.course_num);
       })
       console.log(i)
-      
+    },
+    changeScreen(state,screen){
+      this.state.screenComponest = screen;
     }
   },
   computed: mapState({
     // arrow functions can make the code very succinct!
-    course: state => state.courses,
+    book: state => state.books,
+    word: state => state.word,
     // passing the string value 'count' is same as `state => state.count`
-    courseAlias: 'courses',
+    bookAlias: 'books',
+    wordAlias: 'word',
 
     // to access local state with `this`, a normal function must be used
-    coursetPlusLocalState (state) {
-      return state.courses + this.localCourses
+    booktPlusLocalState (state) {
+      return state.books + this.localbooks
     }
   })
 })

@@ -13,45 +13,32 @@
         <button class="btn btn-outline-success" type="submit">Search</button>
       </form>
     </nav>
-    <div v-if="courses" class="container-fluid">
-      <div
-        class="course-box w-100 pt-5"
-        v-for="(course, index) in courses"
+    <div v-if="books" class="container-fluid">
+      <BookCollection
+        class="book-box w-100 pt-5"
+        v-for="(book, index) in books"
         :key="index"
-      >
-        <div class="card">
-          <div class="card-header">{{ course.title }}</div>
-          <div class="card-body">
-            <blockquote
-              class="blockquote mb-0 d-flex flex-wrap justify-content-evenly"
-            >
-              <Book v-for="(child, index) in course.child_list" :key="index" :child="child" />
-            </blockquote>
-            <footer class="footer">
-              Courses {{ course.course_num }} - Word {{ course.word_num }}
-            </footer>
-          </div>
-        </div>
-      </div>
+        :book="book"
+      />
     </div>
   </div>
 </template>
 
 <script>
 import { mapState } from "vuex";
-import Book from "../components/classComponents/Book"
+import BookCollection from "../components/classComponents/BookCollection.vue"
 
 export default {
   name: "HelloWorld",
    components: {
-    Book
+    BookCollection
   },
   props: {},
   mounted() {},
   methods: {},
   computed: mapState([
     // map this.count to store.state.count
-    "courses",
+    "books",
   ]),
 };
 </script>

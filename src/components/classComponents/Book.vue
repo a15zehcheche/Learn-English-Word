@@ -3,7 +3,7 @@
     <div class="card-header">{{ child.title }}</div>
     <div class="card-body text-dark">
       <div class="course_selector">
-        <ul>
+        <ul class="scrollbar scrollbar-near-moon thin">
           <li
             v-for="(item, index) in courseSelector"
             :key="index"
@@ -35,7 +35,10 @@ export default {
   data() {
     return {
       init: 0,
-      pages: 20,
+      pages:
+        parseInt(this.child.course_num) < 20
+          ? parseInt(this.child.course_num)
+          : 20,
       courseSelector: [],
     };
   },
@@ -68,10 +71,13 @@ export default {
       this.init = item.index;
       this.pages = item.pages;
     },
-    go_learn(index){
-      
-      console.log(`class id: ${this.child.class_id} - course ${index}`)
-    }
+    go_learn(index) {
+      this.$store.dispatch("getCourse",{
+        bookId:this.child.class_id,
+        num:index
+      });
+      this.$store.dispatch("changeScreen","LearnScreen")
+    },
   },
 };
 </script>
@@ -102,6 +108,26 @@ export default {
     display: flex;
     overflow-x: scroll;
     background-color: ghostwhite;
+    ::-webkit-scrollbar {
+      width: 5px;
+    }
+
+    /* Track */
+    ::-webkit-scrollbar-track {
+      box-shadow: inset 0 0 2px grey;
+      border-radius: 10px;
+    }
+
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+      background: rgb(0, 167, 233);
+      border-radius: 10px;
+    }
+
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+      background: rgb(0, 111, 155);
+    }
     li {
       list-style: none;
       white-space: nowrap;

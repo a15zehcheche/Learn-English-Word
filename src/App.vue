@@ -1,15 +1,17 @@
 <template>
-    <ClassHome />
+    <component :is="this.$store.state.screenComponest"/>
 </template>
 
 <script>
 //import HelloWorld from './components/HelloWorld.vue'
 import ClassHome from "./components/ClassHome";
+import LearnScreen from "./components/LearnScreen"
 
 export default {
   name: "App",
   components: {
     ClassHome,
+    LearnScreen
   },
   created() {
     console.log(this.$store.state.count);
