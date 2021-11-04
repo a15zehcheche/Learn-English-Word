@@ -76,7 +76,7 @@ export default {
         bookId:this.child.class_id,
         num:index
       });
-      this.$store.dispatch("changeScreen","LearnScreen")
+      this.$store.dispatch("changeScreen",["LearnScreen",this.child.title],)
     },
   },
 };

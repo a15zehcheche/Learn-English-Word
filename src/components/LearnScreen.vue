@@ -3,7 +3,7 @@
     <div class="d-flex justify-content-center pb-5">
       <div class="position-absolute start-0"><button @click="to_home">back</button></div>
 
-      <h1>list title</h1>
+      <h1>{{this.$store.state.learnWordTitle}}</h1>
       <div class="position-absolute end-0"><Clock /></div>
     </div>
     <div class="d-flex justify-content-center"><button>learn</button>/<button>review</button></div>
@@ -24,7 +24,7 @@ export default {
   },
   methods: {
     to_home() {
-      this.$store.dispatch("changeScreen", "ClassHome");
+      this.$store.dispatch("changeScreen", ["ClassHome"]);
     },
   },
 };

@@ -8,7 +8,8 @@ const store = createStore({
     return {
       screenComponest:"ClassHome",
       books:  require('./list.json').datas,
-      word:  require('./wordlist.json').datas
+      word:  require('./wordlist.json').datas,
+      learnWordTitle:"s",
     }
   },
   mutations: {
@@ -39,8 +40,9 @@ const store = createStore({
       console.log(apiList())
     
     },
-    changeScreen(state,screen){
-      this.state.screenComponest = screen;
+    changeScreen(state,data){
+      this.state.screenComponest = data[0];
+      this.state.learnWordTitle = data[1];
     }
   },
   computed: mapState({
