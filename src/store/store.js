@@ -1,6 +1,7 @@
 import { createStore } from 'vuex'
 import { mapState } from 'vuex'
 import axios from 'axios'
+import {apiList,apiWordList} from "../const"
 
 const store = createStore({
   state() {
@@ -18,14 +19,14 @@ const store = createStore({
   actions:{
     getCourse(state,{bookId,num}){
       console.log(`book ${bookId} - ${num}`)
-      /*axios.get('http://rw.ylapi.cn/reciteword/wordlist.u?uid=11936&appkey=43d5fb26627c965d3d976647f0d56aa6&class_id=250815&course=1').then((response) => {
+     /* axios.get(`${apiWordList(bookId,num)}`).then((response) => {
        console.log(response)
-        this.state.course = response.data.datas
+        this.state.word = response.data.datas
       })*/
     },
     getData(){
       axios.get("http://www.baidu.com")
-     /*axios.get('http://rw.ylapi.cn/reciteword/list.u?uid=11936&appkey=43d5fb26627c965d3d976647f0d56aa6').then((response) => {
+     /*axios.get(`apiList()`).then((response) => {
        console.log(response)
         this.state.books = response.data.datas
       })*/
@@ -34,6 +35,9 @@ const store = createStore({
         i += parseInt(course.course_num);
       })
       console.log(i)
+      console.log(apiWordList(12322,1))
+      console.log(apiList())
+    
     },
     changeScreen(state,screen){
       this.state.screenComponest = screen;

@@ -3,7 +3,7 @@
     <div class="d-flex justify-content-center pb-5">
       <div class="position-absolute start-0"><button @click="to_home">back</button></div>
 
-      <h1>list name</h1>
+      <h1>list title</h1>
       <div class="position-absolute end-0"><Clock /></div>
     </div>
     <div class="d-flex justify-content-center"><button>learn</button>/<button>review</button></div>
